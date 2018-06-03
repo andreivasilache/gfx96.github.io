@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+<div id="dvImage"></div>
+<div id="top">
+	<!-- Togglers -->
+	<i class="fas fa-bolt togg-weather"></i>
+	<!-- Button trigger modal -->
+	<button onclick="showDataFromStorage()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+	 <i class="fas fa-wrench togg-settings"></i>
+	</button>
+
+
+<!-- Weather -->
+<div id="weather">
+  <ul class="weather">
+	<li>Weather:</li>
+	<li class="location"></li>
+	<li class="astronomy"></li>
+	<li class="tomorow"></li>
+	<li class="tomorow-2"></li>
+	<li class="tomorow-3"></li>
+  </ul>
+</div>
+ <!-- Clock -->
+<div id="clock">
+		<span class="h"></span> :
+		<span class="m"></span> :
+		<span class="s"></span>
+</div>
+<!-- main -->
+<hr>
+<div id="timeInfo">
+	<div class="morning elem daydrop">
+		<h1>Good Morning,  <h1 class="name"> </h1></h1>
+	</div>
+	<div class="day elem daydrop">
+		<h1>Hello,  <h1 class="name"></h1></h1>
+	</div>
+	<div class="evening elem daydrop">
+		<h1>Good evening,  <h1 class="name"> </h1></h1>
+	</div>
+	<div class="night elem daydrop">
+		<h1>Good night, <h1 class="name"> </h1></h1>
+	</div>
+	<h1>What is your main focus for today?</h1>
+</div>
+<hr>
+<!-- Buttons -->
+<div id="buttons">
+			<a href="https://www.facebook.com/vasilache.andrei46" class="btn btn succes" id="Facebook">
+				<i id="MainIcons" class="fab fa-facebook-f"></i>
+			</a>
+			<a href="https://www.youtube.com/" class="btn btn succes " id="Youtube">
+				<i id="MainIcons" class="fab fa-youtube"></i>
+			</a>
+			<a href="https://www.google.ro/" class="btn btn succes " id="Search">
+				<i id="MainIcons" class="fas fa-search"></i>
+			</a>
+			<a href="https://mail.google.com/mail/u/0/#inbox" class="btn btn succes " id=Mail>
+				<i id="MainIcons" class="far fa-envelope Mail"></i>
+			</a>
+			<a href="https://www.udemy.com/home/my-courses/learning/" class="btn btn succes " id="Learn">
+				<i id="MainIcons" class="fab fa-leanpub Learn"></i>
+			</a>
+			<a href="https://www.netflix.com/browse" class="btn btn succes">
+				<i id="MainIcons" class="fas fa-film " id="Film"></i>
+			</a>
+			
+</div>
+
+<!-- Quotes -->
+<div id="Quote">
+</div>
+
+<!-- Modal -->
+	<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	      <div class="ChangingAdresses d-inline" >
+	      	<form>
+			       	<i class="fab fa-facebook-f insideIcon"> </i>
+			       	<input type="text" class="form-control"  placeholder="Link" id="Facebook1">
+			</div>
+			   <div class="ChangingAdresses d-inline" >
+			       	<i class="fab fa-youtube insideIcon"></i>
+			       	<input type="text" class="form-control" placeholder="Link" id="Youtube1">
+			   </div></br>
+
+			   <div class="ChangingAdresses d-inline" >
+			       	<i class="fas fa-search insideIcon"></i>
+			       	<input type="text" class="form-control"  placeholder="Link" id="Search1">
+			   </div></br>
+
+			   <div class="ChangingAdresses d-inline" >
+			       	<i class="far fa-envelope insideIcon"></i>
+			       	<input type="text" class="form-control"  placeholder="Link" id="Mail1">
+			   </div></br>
+
+			   <div class="ChangingAdresses d-inline" >
+			       	<i class="fab fa-leanpub insideIcon"></i>
+			       	<input type="text" class="form-control"  placeholder="Link" id="Learn1">
+			   </div></br>
+			    <div class="ChangingAdresses d-inline" >
+			       	<i class="fas fa-film insideIcon"></i>
+			       	<input type="text" class="form-control"  placeholder="Link" id="Film1">
+			   </div></br>
+			   <div class="ChangingAdresses d-inline" >
+			       	<i class="fas fa-map-marker insideIcon"></i>
+			     <input type="text" class="form-control"  placeholder="Location" id="Location">
+			   </div></br>
+			   <div class="ChangingAdresses d-inline" >
+			   	<i class="fab fa-phoenix-framework insideIcon"></i>
+			     <input type="text" class="form-control"  placeholder="Name" id="Name">
+			   </div></br>
+			   
+
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	        <div class="modal-footer">
+				<button onclick="store()"type="button" class="btn btn-secondary">Save changes</button>	
+			   </form>
+		     </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+</div><!-- top -->
+
+
+
+
+		<script type="text/javascript" src="index.js"></script>
+</body>
+</html>

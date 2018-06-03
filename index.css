@@ -1,0 +1,108 @@
+body{
+		margin:0;
+		background-color: black;
+}
+		
+
+
+#dvImage{		
+	position: relative;		
+	height:100vh;
+	width:auto;
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: auto;
+    z-index: -1;
+}
+#top{
+	margin-top: -100vh;
+}
+/*weather text*/
+.weather{
+	list-style: none;
+	color:white;
+	text-shadow: 1px 1px 1px black;
+
+}
+#weather{
+	float:right;
+}
+/*togler style*/
+.togg-weather{
+	text-shadow: 1px 1px 1px black;
+	font-size: 2em;
+	margin:6px 6px;
+	float: right;
+	color: white;
+}
+.togg-settings{
+	text-shadow: 1px 1px 1px black;
+	font-size: 2em;
+    margin:6px 6px;
+}
+#togg-btn{
+	background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+/*Clock style*/
+#clock{
+	position: relative;
+	text-align: center;
+	font-size:9em;
+	padding-top: 8%;
+	color:white;
+	z-index: 1;
+	text-shadow: 1px 1px 1px black;
+}
+#buttons{
+ 	padding-left:32%;
+}
+
+#MainIcons{
+	font-size:3em; 
+	color:#777b79;
+	text-shadow: 1px 1px 1px black;
+	text-shadow: -1px -1px -1px black;
+	 	
+}
+.btn-primary{
+	background-color: transparent !important;	
+	border-color: transparent;
+}
+
+#MainIcons:hover{
+	font-size:3.4em; 
+	/*color:#23313F;*/
+	/*text-shadow: 2px 2px 2px #2574a9;*/
+}
+
+#changeAttr{
+	padding-left:33%;
+	padding-top:4px;
+}
+.ValInput,.form-control{
+	width:auto;
+	display:inline;
+}
+.insideIcon{
+	width:25px;	
+}	
+.daydrop{
+	display: inline-flex;
+}
+#timeInfo{
+	text-align: center;
+	color: white;
+	text-shadow: 1px 1px 1px black;
+	font-family: 'Ubuntu', sans-serif;
+}
+hr{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
