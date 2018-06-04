@@ -11,30 +11,53 @@
     "https://images.unsplash.com/photo-1519827737530-b255e4d1d0af?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=adbba1760be6ef305d1532a3c626f9c1&auto=format&fit=crop&w=1226&q=80",
     "https://images.unsplash.com/photo-1521953793652-39ff7b30d400?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=187282855273f92db1d0f65835ba8f60&auto=format&fit=crop&w=1350&q=80"
     ];
- var quotes=[];
+ var quotes=[
+    '  " Do not let yesterday take up too much of today." - Will Rogers',
+    '  " If you are working on something that you really care about, you do not have to be pushed. The vision pulls you." - Steve Jobs',
+    '  " People who are crazy enough to think they can change the world, are the ones who do." - Rob Siltanen',
+    '  " Knowing is not enough; we must apply. Wishing is not enough; we must do."  - Johann Wolfgang Von Goethe',
+    '  " The only limit to our realization of tomorrow will be our doubts of today."  - Albert Einstein ',
+    '  " Creativity is intelligence having fun." ',
+    '  " You are never too old to set another goal or to dream a new dream." - C.S. Lewis ',
+    '  " You do not have to be great to start, but you have to start to be great." - Zig Ziglar ',
+    '  " Success usually comes to those who are too busy to be looking for it. " - Henry David Thoreau',
+    '  " Success is walking from failure to failure with no loss of enthusiasm. " - Winston Churchill',
+    '  " Try not to become a person of success, but rather try to become a person of value." - Albert Einstein',
+    '  " The No. 1 reason people fail in life is because they listen to their friends, family, and neighbors." - Napoleon Hill',
+    '  " You never regret being kind." - Nicole Shepherdh',
+    '  " You get in life what you have the courage to ask for." - Nancy D. Solomon',
+];
 
 var city =localStorage.City || "Suceava";
 var name =localStorage.Name || "Andrei";
 
 //                             Background image switcher 
  
+ function randomElement(arr){
+  var number= Math.floor(Math.random()*arr.length);
+  return arr[number];
 
+ }
+ 
+  
 function changeBackground(){
-
+// 240000
 }
+  // background-image: 
+  //   linear-gradient(
+  //     rgba(0, 0, 0, 0.5),
+  //     rgba(0, 0, 0, 0.5)
+  //   ),
+  //   url(shoes.jpg);
 $(function () {
-    var i = 0;
-    $("#dvImage").css("background-image", "url("+images[i]+")");
+ $("#dvImage").css("background-image","linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),"+"url("+randomElement(images)+")");
+                                     
     setInterval(function () {
-        i++;
-        if (i == images.length) {
-            i = 0;
-        }
         $("#dvImage").fadeOut("slow", function () {
-            $(this).css("background-image", "url("+images[i]+")");
+            $(this).css("background-image", "linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),"+"url("+randomElement(images)+")");
             $(this).fadeIn("slow");
         });
-    }, 240000); 
+    }, 30000); 
 });
 //                                               Clock
 
@@ -50,6 +73,7 @@ function startTime() {
           $(".s").text(s);
 }
     startTime();
+    
 },100);
 
 
@@ -123,6 +147,7 @@ function setHrefVal(){
 function timeInfo(){
     var today = new Date();
     var h = today.getHours();
+
     $(".name").text("   "+name+".");
 
     $(".morning")
@@ -132,11 +157,11 @@ function timeInfo(){
      $(".morning").siblings(".elem").hide();
      $(".morning").show();
   }
-  if(h>12 && h<18){
+  else if(h>12 && h<18){
     $(".day").siblings(".elem").hide();
     $(".day").show();
   }
-  if(h>18 && h<22){
+  else if(h>18 && h<22){
     $(".evening").siblings(".elem").hide();
     $(".evening").show();
   }else{
@@ -146,4 +171,12 @@ function timeInfo(){
   }
 }
 
-setInterval(timeInfo(),10800000); //once 3h
+// Quotes
+function changeQuote(){
+  $(".quote").text(randomElement(quotes));
+  
+}
+timeInfo();
+changeQuote(); //to be deleted
+setInterval(timeInfo,10800000); //once 3h
+setInterval(changeQuote,15000);

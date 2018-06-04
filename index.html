@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title></title>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -80,7 +80,8 @@
 </div>
 
 <!-- Quotes -->
-<div id="Quote">
+<div id="quote">
+	<p class="quote"></p>
 </div>
 
 <!-- Modal -->
@@ -88,7 +89,7 @@
 	  <div class="modal-dialog modal-dialog-centered" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
-	        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+	        <h5 class="modal-title" id="exampleModalLongTitle">Settings</h5>
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 	          <span aria-hidden="true">&times;</span>
 	        </button>
@@ -97,30 +98,30 @@
 	      <div class="ChangingAdresses d-inline" >
 	      	<form>
 			       	<i class="fab fa-facebook-f insideIcon"> </i>
-			       	<input type="text" class="form-control"  placeholder="Link" id="Facebook1">
+			       	<input type="text" class="form-control"  placeholder="Facebook link" id="Facebook1">
 			</div>
 			   <div class="ChangingAdresses d-inline" >
 			       	<i class="fab fa-youtube insideIcon"></i>
-			       	<input type="text" class="form-control" placeholder="Link" id="Youtube1">
+			       	<input type="text" class="form-control" placeholder="Youtube link" id="Youtube1">
 			   </div></br>
 
 			   <div class="ChangingAdresses d-inline" >
 			       	<i class="fas fa-search insideIcon"></i>
-			       	<input type="text" class="form-control"  placeholder="Link" id="Search1">
+			       	<input type="text" class="form-control"  placeholder="Search link" id="Search1">
 			   </div></br>
 
 			   <div class="ChangingAdresses d-inline" >
 			       	<i class="far fa-envelope insideIcon"></i>
-			       	<input type="text" class="form-control"  placeholder="Link" id="Mail1">
+			       	<input type="text" class="form-control"  placeholder="Email link" id="Mail1">
 			   </div></br>
 
 			   <div class="ChangingAdresses d-inline" >
 			       	<i class="fab fa-leanpub insideIcon"></i>
-			       	<input type="text" class="form-control"  placeholder="Link" id="Learn1">
+			       	<input type="text" class="form-control"  placeholder="Learn link" id="Learn1">
 			   </div></br>
 			    <div class="ChangingAdresses d-inline" >
 			       	<i class="fas fa-film insideIcon"></i>
-			       	<input type="text" class="form-control"  placeholder="Link" id="Film1">
+			       	<input type="text" class="form-control"  placeholder="Movie Site" id="Film1">
 			   </div></br>
 			   <div class="ChangingAdresses d-inline" >
 			       	<i class="fas fa-map-marker insideIcon"></i>
@@ -129,17 +130,17 @@
 			   <div class="ChangingAdresses d-inline" >
 			   	<i class="fab fa-phoenix-framework insideIcon"></i>
 			     <input type="text" class="form-control"  placeholder="Name" id="Name">
-			   </div></br>
+			   </div>
 			   
 
 	      </div>
 	      <div class="modal-footer">
-	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-	        <div class="modal-footer">
+	      	<div class="modal-footer">
 				<button onclick="store()"type="button" class="btn btn-secondary">Save changes</button>	
-			   </form>
-		     </div>
+			</div>
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 	      </div>
+	      <h6>  Created by Vasilache Andrei </h6>
 	    </div>
 	  </div>
 	</div>

@@ -2,6 +2,18 @@ body{
 		margin:0;
 		background-color: black;
 }
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
 		
 
 
@@ -14,6 +26,11 @@ body{
     background-size: cover;
     width: auto;
     z-index: -1;
+    background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.9)
+    );
 }
 #top{
 	margin-top: -100vh;
@@ -53,32 +70,37 @@ body{
 #clock{
 	position: relative;
 	text-align: center;
-	font-size:9em;
-	padding-top: 8%;
+	font-size:13vh;
+	margin-top: 13vh;
 	color:white;
 	z-index: 1;
 	text-shadow: 1px 1px 1px black;
 }
 #buttons{
- 	padding-left:32%;
+ 	padding-left:32vh;
 }
-
+/*#777b79*/
 #MainIcons{
+	padding-right: 2px;
 	font-size:3em; 
-	color:#777b79;
+	color:white;
 	text-shadow: 1px 1px 1px black;
 	text-shadow: -1px -1px -1px black;
-	 	
 }
+#MainIcons:hover{
+	color:#777b79;
+
+}
+
 .btn-primary{
 	background-color: transparent !important;	
 	border-color: transparent;
 }
 
-#MainIcons:hover{
-	font-size:3.4em; 
-	/*color:#23313F;*/
-	/*text-shadow: 2px 2px 2px #2574a9;*/
+
+.btn{
+	display: initial;
+	padding: 0 30px;
 }
 
 #changeAttr{
@@ -105,5 +127,29 @@ hr{
 	width: 62em;
     border: 0;
     height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
+}
+.quote{
+	color: white;
+	text-align: center;
+	text-shadow: 1px 1px 1px black;
+	font-family: 'Ubuntu', sans-serif;
+
+}
+#quote{
+	margin-top: 34vh;
+}
+/*Styling modal*/
+.modal-footer{
+	border: none;
+}
+.form-control{
+	padding: 7px;
+	
+	margin: 3px 0px;
+	width:92%;
+
+}
+.btn-primary{
+	padding: 0;
 }
