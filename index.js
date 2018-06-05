@@ -29,7 +29,7 @@
 ];
 
 var city =localStorage.City || "Suceava";
-var name =localStorage.Name || "Andrei";
+var name =localStorage.Name || "Stranger";
 
 //                             Background image switcher 
  
@@ -180,3 +180,8 @@ timeInfo();
 changeQuote(); //to be deleted
 setInterval(timeInfo,10800000); //once 3h
 setInterval(changeQuote,15000);
+
+$(".instalation").hide();
+function guide(){
+$(".instalation").slideToggle();
+}

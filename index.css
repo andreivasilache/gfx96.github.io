@@ -153,3 +153,9 @@ hr{
 .btn-primary{
 	padding: 0;
 }
+.modal-footer>:not(:last-child) {
+    margin-right: -0.75rem;
+ }
+ .instalation{
+ 	margin-left: 14px;
+ }

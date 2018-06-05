@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>HomeWally</title>
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
@@ -136,11 +136,24 @@
 	      </div>
 	      <div class="modal-footer">
 	      	<div class="modal-footer">
-				<button onclick="store()"type="button" class="btn btn-secondary">Save changes</button>	
+				<button onclick="store()"type="button" class="btn btn-secondary btn-success">Save changes</button>	
 			</div>
-	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+			<button type="button" class="btn btn-secondary btn-danger" data-dismiss="modal">Close</button>
+	        <div class="modal-footer">
+				<button onclick="guide()" type="button" class="btn btn-secondary btn-warning">Instalation guide</button>	
+			</div>
+
+			
+
 	      </div>
-	      <h6>  Created by Vasilache Andrei </h6>
+	      <div class="instalation">
+	      <h6>Instalation guide:</h6>
+	      <h6>1)Install <a href="https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna">this</a> extension.</h6>
+	      <h6>2)Open extension menu by clicking on extension pictogram.</h6>
+	      <h6>3)Paste <b>"https://gfx96.github.io/"</b> on <b>Redirect URL.</b></h6>
+	      </div>
+	      <i style="text-align: right; padding-right: 8px;"">  Created by <a href="https://hidden-depths-34096.herokuapp.com/">Vasilache Andrei</a>.</i>
 	    </div>
 	  </div>
 	</div>
