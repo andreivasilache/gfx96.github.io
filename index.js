@@ -122,7 +122,7 @@ function store(){
      $('#exampleModalCenter').modal('hide');
      setHrefVal();
 }
-
+//show data on settings box
 function showDataFromStorage(){
   $("#Facebook1").val(localStorage.Facebook);
   $("#Youtube1").val(localStorage.Youtube);
@@ -134,13 +134,23 @@ function showDataFromStorage(){
   $("#Name").val(localStorage.Name);
   
 }
+//set the links to the bottons 
+
+var FacebookUrl=localStorage.Facebook || "https://www.facebook.com/vasilache.andrei46";
+var YoutubeUrl=localStorage.Youtube || "https://www.youtube.com/";
+var SearchUrl=localStorage.Search || "https://www.google.com/";
+var MailUrl=localStorage.Mail || "";
+var LearnUrl=localStorage.Learn|| "";
+var FilmUrl=localStorage.Film || "";
+// Set the links when page loads
+window.onload=setHrefVal;
 function setHrefVal(){
-  $("#Facebook").attr("href",localStorage.Facebook);
-  $("#Youtube").attr("href", localStorage.Youtube);
-  $("#Search").attr("href", localStorage.Search);
-  $("#Mail").attr("href", localStorage.Mail);
-  $("#Learn").attr("href", localStorage.Learn);
-  $("#Film").attr("href", localStorage.Film);
+  $("#Facebook").attr("href",FacebookUrl);
+  $("#Youtube").attr("href",YoutubeUrl );
+  $("#Search").attr("href", SearchUrl);
+  $("#Mail").attr("href", MailUrl);
+  $("#Learn").attr("href", LearnUrl);
+  $("#Film").attr("href", FilmUrl);
 }
 
 // Get time info
@@ -154,18 +164,26 @@ function timeInfo(){
     $(".morning").hide();
     $(".morning").hide();
   if(h>5 && h<12){
-     $(".morning").siblings(".elem").hide();
-     $(".morning").show();
+   $(".morning").siblings(".elem").hide();
+   $(".nightSalute").hide();
+   $(".daySalute").show();
+   $(".morning").show();
   }
   else if(h>12 && h<18){
     $(".day").siblings(".elem").hide();
+    $(".daySalute").show();
+    $(".nightSalute").hide();
     $(".day").show();
   }
   else if(h>18 && h<22){
     $(".evening").siblings(".elem").hide();
+    $(".daySalute").hide();
+    $(".nightSalute").show();
     $(".evening").show();
   }else{
     $(".night").siblings(".elem").hide();
+    $(".daySalute").hide();
+    $(".nightSalute").show();
     $(".night").show();
 
   }
