@@ -1,6 +1,6 @@
 body{
-		margin:0;
-		background-color: black;
+	margin:0;
+	background-color: black;
 }
 html {
     overflow: scroll;
@@ -77,7 +77,7 @@ html {
 	text-shadow: 1px 1px 1px black;
 }
 #buttons{
- 	padding-left:32vh;
+ 	padding-left:26vw;
 }
 /*#777b79*/
 #MainIcons{
