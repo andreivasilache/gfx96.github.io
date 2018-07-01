@@ -1,7 +1,7 @@
 body{
 	margin:0;
 	background-color: black;
-}
+}	
 html {
     overflow: scroll;
     overflow-x: hidden;
@@ -14,8 +14,18 @@ html {
 ::-webkit-scrollbar-thumb {
     background: #FF0000;
 }
-		
-
+.large-modal-content {
+	position: relative;
+	background-color: #fff;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	border: 0;
+	border: 0;
+	border-radius: 0;
+	outline: 0;
+	max-height: 650px;
+	overflow: scroll;
+  }
 
 #dvImage{		
 	position: relative;		
@@ -44,6 +54,7 @@ html {
 }
 #weather{
 	float:right;
+	font-size: 89%;
 }
 /*togler style*/
 .togg-weather{
@@ -137,7 +148,7 @@ hr{
 
 }
 #quote{
-	margin-top: 34vh;
+	margin-top: 13px;
 }
 /*Styling modal*/
 .modal-footer{
@@ -145,10 +156,8 @@ hr{
 }
 .form-control{
 	padding: 7px;
-	
 	margin: 3px 0px;
 	width:92%;
-
 }
 .btn-primary{
 	padding: 0;
@@ -159,3 +168,34 @@ hr{
  .instalation{
  	margin-left: 14px;
  }
+ #imgChange{
+	padding: 0;
+	margin: -8px 72%;
+ }
+
+ .image{  
+	width: 30%;
+    height: 160px;
+	margin: 11px;
+	padding: 0;
+ }
+ .image:hover{
+	height: 180px;
+	width:31%;
+ }
+ /* add image */
+.add{
+	margin:10px;
+}
+.imageLink{
+	width: 80%;
+	margin-left: 1%;
+	margin-right: 11px;
+}
+.fa-plus{
+	margin-left: 1%;
+}
+.saveBtn{
+	padding: 3px 30px;
+	margin-top: -6px;
+}

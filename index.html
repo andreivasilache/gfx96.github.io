@@ -2,7 +2,8 @@
 <html>
 <head>
 	<title>HomeWally</title>
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -54,7 +55,11 @@
 		<h1>Good night, <h1 class="name"> </h1></h1>
 	</div>
 	<h1 class="nightSalute">What is your main focus for tonight?</h1>
-    <h1 class="daySalute">What is your main focus for today?</h1>
+		<h1 class="daySalute">What is your main focus for today?</h1>
+		<!-- Quotes -->
+	<div id="quote">
+		<p class="quote"></p>
+	</div>
 </div>
 <hr>
 <!-- Buttons -->
@@ -80,12 +85,9 @@
 			
 </div>
 
-<!-- Quotes -->
-<div id="quote">
-	<p class="quote"></p>
-</div>
 
-<!-- Modal -->
+
+<!-- Modal with settings-->
 	<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 	  <div class="modal-dialog modal-dialog-centered" role="document">
 	    <div class="modal-content">
@@ -113,7 +115,7 @@
 
 			   <div class="ChangingAdresses d-inline" >
 			       	<i class="far fa-envelope insideIcon"></i>
-			       	<input type="text" class="form-control"  placeholder="Email link" id="Mail1">
+			       	<input type="text" class="form-control"  placeholder="Email link" id="Mail1" autocomplete='email'>
 			   </div></br>
 
 			   <div class="ChangingAdresses d-inline" >
@@ -130,35 +132,57 @@
 			   </div></br>
 			   <div class="ChangingAdresses d-inline" >
 			   	<i class="fab fa-phoenix-framework insideIcon"></i>
-			     <input type="text" class="form-control"  placeholder="Name" id="Name">
+			     <input type="text" class="form-control"  placeholder="Name" id="Name" autocomplete='name'>
 			   </div>
-			   
-
-	      </div>
-	      <div class="modal-footer">
-	      	<div class="modal-footer">
-				<button onclick="store()"type="button" class="btn btn-secondary btn-success">Save changes</button>	
+				</div>
+			<!-- Change images   href=".img-change"-->
+			<div class="modal-footer" id="imgChange">
+					<button type="button" class="btn btn-success changeImg_Btn" data-toggle="modal" data-target=".bd-example-modal-lg">Personalize background</button>
 			</div>
+			<!-- Settings of page-->
+	    <div class="modal-footer">
+				
+				
+				<div class="modal-footer">
+					<button onclick="store()" type="button" class="btn btn-secondary btn-success" >Save changes</button>	
+				</div>
 
-			<button type="button" class="btn btn-secondary btn-danger" data-dismiss="modal">Close</button>
-	        <div class="modal-footer">
-				<button onclick="guide()" type="button" class="btn btn-secondary btn-warning">Instalation guide</button>	
-			</div>
+				<button type="button" class="btn btn-secondary btn-danger" data-dismiss="modal">Close</button>
 
-			
-
-	      </div>
+				<div class="modal-footer">
+					<button onclick="guide()" type="button" class="btn btn-secondary btn-warning">Instalation guide</button>	
+				</div>
+ 
+	    </div>
 	      <div class="instalation">
 	      <h6>Instalation guide:</h6>
 	      <h6>1)Install <a href="https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna">this</a> extension.</h6>
 	      <h6>2)Open extension menu by clicking on extension pictogram.</h6>
-	      <h6>3)Paste <b>"https://gfx96.github.io/"</b> on <b>Redirect URL.</b></h6>
+				<h6>3)Paste <b>"https://gfx96.github.io/"</b> on <b>Redirect URL.</b></h6>
+				<h6>For background images:Please use landscape images ,hd quality.</h6>
+				<h6>Do you found a bug? Report it on my  <a href="https://www.facebook.com/vasilache.andrei46">Facebook adress</a>!</h6>
 	      </div>
-	      <i style="text-align: right; padding-right: 8px;"">  Created by <a href="https://hidden-depths-34096.herokuapp.com/">Vasilache Andrei</a>.</i>
+	      <i style="text-align: right; padding-right:8px;">  Created by <a href="https://hidden-depths-34096.herokuapp.com/">Vasilache Andrei</a>.</i>
 	    </div>
 	  </div>
 	</div>
 
+	<!-- Large modal -->
+	
+	<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content large-modal-content">
+				<div class="images">
+					<div class="add">
+							<i class="fas fa-plus"></i> <!-- add image -->
+							<input type="text" placeholder="Add your own link image" class="imageLink">
+							<button onclick="saveStorage_Images()" class="btn btn-success saveBtn">Save</button>
+							<h6 style="text-align:right">Press on images to delete them,then save.</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div><!-- top -->
 
 
