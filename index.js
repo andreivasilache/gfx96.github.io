@@ -48,10 +48,10 @@ function randomElement(arr){ //return random iteration of number
  
 
 $(function () { //background image fade
- $("#dvImage").css("background-image","linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),"+"url("+randomElement(localImages)+")");
+ $("#dvImage").css("background-image","linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),"+"url("+randomElement(localImages)+")");
     setInterval(function () {
         $("#dvImage").fadeOut("slow", function () {
-            $(this).css("background-image", "linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),"+"url("+randomElement(localImages)+")");
+            $(this).css("background-image", "linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),"+"url("+randomElement(localImages)+")");
             $(this).fadeIn("slow");
         });
     }, 30000); 
