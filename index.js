@@ -14,7 +14,7 @@
 
   if (!haveBeenInit) { //if storage is empty
     localStorage.setItem("Image", JSON.stringify(images));
-    localImages = JSON.parse(localStorage.getItem("Image")); // get images from storage as localImages parameter
+    localImages = JSON.parse(localStorage.getItem("Image")); // gets images from storage as localImages parameter
     localStorage.setItem("init", "true"); // initialized have been made
   }
 
@@ -214,6 +214,7 @@
       } else {
         showAddedImage();
         saveStorage_Images();
+        document.querySelector(".imageLink").value = '';
       }
     }
   }
