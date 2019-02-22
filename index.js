@@ -37,7 +37,6 @@
 
   var name = localStorage.Name || "Stranger"; //set  name
 
-
   function randomElement(arr) { //return random iteration of number
     var number = Math.floor(Math.random() * arr.length);
     return arr[number];
