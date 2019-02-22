@@ -1,19 +1,25 @@
-body{
-	margin:0;
+body {
+	margin: 0;
 	background-color: black;
-}	
+}
+
 html {
-    overflow: scroll;
-    overflow-x: hidden;
+	overflow: scroll;
+	overflow-x: hidden;
 }
+
 ::-webkit-scrollbar {
-    width: 0px;  /* remove scrollbar space */
-    background: transparent;  /* optional: just make scrollbar invisible */
+	width: 0px;
+	/* remove scrollbar space */
+	background: transparent;
+	/* optional: just make scrollbar invisible */
 }
+
 /* optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
-    background: #FF0000;
+	background: #FF0000;
 }
+
 .large-modal-content {
 	position: relative;
 	background-color: #fff;
@@ -25,177 +31,204 @@ html {
 	outline: 0;
 	max-height: 650px;
 	overflow: scroll;
-  }
-
-#dvImage{		
-	position: relative;		
-	height:100vh;
-	width:auto;
-	background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: auto;
-    z-index: -1;
-    background-image: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.9),
-      rgba(0, 0, 0, 0.9)
-    );
 }
-#top{
+
+#dvImage {
+	position: relative;
+	height: 100vh;
+	width: auto;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: auto;
+	z-index: -1;
+	background-image:
+		linear-gradient(rgba(0, 0, 0, 0.9),
+		rgba(0, 0, 0, 0.9));
+}
+
+#top {
 	margin-top: -100vh;
 }
+
 /*weather text*/
-.weather{
+.weather {
 	list-style: none;
-	color:white;
+	color: white;
 	text-shadow: 1px 1px 1px black;
 
 }
-#weather{
-	float:right;
+
+#weather {
+	float: right;
 	font-size: 89%;
 }
+
 /*togler style*/
-.togg-weather{
+.togg-weather {
 	text-shadow: 1px 1px 1px black;
 	font-size: 2em;
-	margin:6px 6px;
+	margin: 6px 6px;
 	float: right;
 	color: white;
 }
-.togg-settings{
+
+.togg-settings {
 	text-shadow: 1px 1px 1px black;
 	font-size: 2em;
-    margin:6px 6px;
+	margin: 6px 6px;
 }
-#togg-btn{
+
+#togg-btn {
 	background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
+	background-repeat: no-repeat;
+	border: none;
+	cursor: pointer;
+	overflow: hidden;
+	outline: none;
 }
+
 /*Clock style*/
-#clock{
+#clock {
 	position: relative;
 	text-align: center;
-	font-size:13vh;
+	font-size: 13vh;
 	margin-top: 13vh;
-	color:white;
+	color: white;
 	z-index: 1;
 	text-shadow: 1px 1px 1px black;
 }
-#buttons{
- 	padding-left:26vw;
+
+#buttons {
+	text-align: center;
 }
+
 /*#777b79*/
-#MainIcons{
+#MainIcons {
 	padding-right: 2px;
-	font-size:3em; 
-	color:white;
+	font-size: 3em;
+	color: white;
 	text-shadow: 1px 1px 1px black;
 	text-shadow: -1px -1px -1px black;
 }
-#MainIcons:hover{
-	color:#777b79;
+
+#MainIcons:hover {
+	color: #777b79;
 
 }
 
-.btn-primary{
-	background-color: transparent !important;	
+.btn-primary {
+	background-color: transparent !important;
 	border-color: transparent;
 }
 
 
-.btn{
+.btn {
 	display: initial;
 	padding: 0 30px;
 }
 
-#changeAttr{
-	padding-left:33%;
-	padding-top:4px;
+#changeAttr {
+	padding-left: 33%;
+	padding-top: 4px;
 }
-.ValInput,.form-control{
-	width:auto;
-	display:inline;
+
+.ValInput,
+.form-control {
+	width: auto;
+	display: inline;
 }
-.insideIcon{
-	width:25px;	
-}	
-.daydrop{
+
+.insideIcon {
+	width: 25px;
+}
+
+.daydrop {
 	display: inline-flex;
 }
-#timeInfo{
+
+#timeInfo {
 	text-align: center;
 	color: white;
 	text-shadow: 1px 1px 1px black;
 	font-family: 'Ubuntu', sans-serif;
 }
-hr{
+
+hr {
 	width: 62em;
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
+	border: 0;
+	height: 1px;
+	background-image: linear-gradient(to right, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
 }
-.quote{
+
+.quote {
 	color: white;
 	text-align: center;
 	text-shadow: 1px 1px 1px black;
 	font-family: 'Ubuntu', sans-serif;
 
 }
-#quote{
+
+#quote {
 	margin-top: 13px;
 }
+
 /*Styling modal*/
-.modal-footer{
+.modal-footer {
 	border: none;
 }
-.form-control{
+
+.form-control {
 	padding: 7px;
 	margin: 3px 0px;
-	width:92%;
+	width: 92%;
 }
-.btn-primary{
+
+.btn-primary {
 	padding: 0;
 }
+
 .modal-footer>:not(:last-child) {
-    margin-right: -0.75rem;
- }
- .instalation{
- 	margin-left: 14px;
- }
- #imgChange{
+	margin-right: -0.75rem;
+}
+
+.instalation {
+	margin-left: 14px;
+}
+
+#imgChange {
 	padding: 0;
 	margin: -8px 72%;
- }
+}
 
- .image{  
+.image {
 	width: 30%;
-    height: 160px;
+	height: 160px;
 	margin: 11px;
 	padding: 0;
- }
- .image:hover{
-	height: 180px;
-	width:31%;
- }
- /* add image */
-.add{
-	margin:10px;
 }
-.imageLink{
+
+.image:hover {
+	height: 180px;
+	width: 31%;
+}
+
+/* add image */
+.add {
+	margin: 10px;
+}
+
+.imageLink {
 	width: 80%;
 	margin-left: 1%;
 	margin-right: 11px;
 }
-.fa-plus{
+
+.fa-plus {
 	margin-left: 1%;
 }
-.saveBtn{
+
+.saveBtn {
 	padding: 3px 30px;
 	margin-top: -6px;
 }

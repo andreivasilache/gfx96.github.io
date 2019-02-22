@@ -1,5 +1,5 @@
   var localImages = [];
-  var haveBeenInit = JSON.parse(localStorage.getItem("init")) || localStorage.setItem("init", "false"); //false= make init 
+  var haveBeenInit = JSON.parse(localStorage.getItem("init")) || localStorage.setItem("init", "false"); //false= make init
 
   var images = [
     'https://images.unsplash.com/photo-1530297189419-8155da24fc99?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=42f814b6f0139f373fda848dffc7eba5&auto=format&fit=crop&w=967&q=80',
@@ -12,10 +12,10 @@
 
   localImages = JSON.parse(localStorage.getItem("Image"));
 
-  if (!haveBeenInit) { //if storage is empty
+  if (!haveBeenInit) {
     localStorage.setItem("Image", JSON.stringify(images));
-    localImages = JSON.parse(localStorage.getItem("Image")); // gets images from storage as localImages parameter
-    localStorage.setItem("init", "true"); // initialized have been made
+    localImages = JSON.parse(localStorage.getItem("Image"));
+    localStorage.setItem("init", "true");
   }
 
   var quotes = [
@@ -35,10 +35,8 @@
     '  " You get in life what you have the courage to ask for." - Nancy D. Solomon',
   ];
 
-  var city = localStorage.City || "Suceava"; //set  city
   var name = localStorage.Name || "Stranger"; //set  name
 
-  // Background image switcher 
 
   function randomElement(arr) { //return random iteration of number
     var number = Math.floor(Math.random() * arr.length);
@@ -69,33 +67,6 @@
     startTime();
   }, 100);
 
-  //Api data fetcher weather url
-  var url = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22+" + city + "%2C%20ro%22)%20%20and%20u%3D%27c%27&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys";
-
-  fetch(url) //fetch url
-    .then((data) => data.json()) //transforma data in JSON
-    .then(function (data) {
-      var elements = data;
-      $(".location").html(data.query.results.channel.location.city + " - " + data.query.results.channel.item.condition.temp + " C " + data.query.results.channel.item.condition.text);
-      $(".tomorow").html(data.query.results.channel.item.forecast[1].day + " : " + data.query.results.channel.item.forecast[1].low + "-" + data.query.results.channel.item.forecast[1].high + " C " + data.query.results.channel.item.forecast[1].text);
-      $(".tomorow-2").html(data.query.results.channel.item.forecast[2].day + " : " + data.query.results.channel.item.forecast[2].low + "-" + data.query.results.channel.item.forecast[2].high + " C " + data.query.results.channel.item.forecast[2].text);
-      $(".tomorow-3").html(data.query.results.channel.item.forecast[3].day + " : " + data.query.results.channel.item.forecast[3].low + "-" + data.query.results.channel.item.forecast[3].high + " C " + data.query.results.channel.item.forecast[3].text);
-      $(".astronomy").html("Sun and moon: " + data.query.results.channel.astronomy.sunrise + " - " + data.query.results.channel.astronomy.sunset);
-    }).catch(err => console.log(err));
-
-  // Page visual setup
-  $("#weather").hide();
-
-  $(".togg-weather").on("mouseover", function () {
-    $("#weather").show();
-  });
-
-  $(".togg-weather").on("mouseleave", function () {
-    $("#weather").hide();
-  });
-
-
-
   function store() {
     localStorage.setItem("Facebook", document.getElementById("Facebook1").value);
     localStorage.setItem("Youtube", document.getElementById("Youtube1").value);
@@ -103,7 +74,6 @@
     localStorage.setItem("Mail", document.getElementById("Mail1").value);
     localStorage.setItem("Learn", document.getElementById("Learn1").value);
     localStorage.setItem("Film", document.getElementById("Film1").value);
-    localStorage.setItem("City", document.getElementById("Location").value);
     localStorage.setItem("Name", document.getElementById("Name").value);
     $('#exampleModalCenter').modal('hide');
     setHrefVal();
@@ -116,7 +86,6 @@
     $("#Mail1").val(localStorage.Mail);
     $("#Learn1").val(localStorage.Learn);
     $("#Film1").val(localStorage.Film);
-    $("#Location").val(localStorage.City);
     $("#Name").val(localStorage.Name);
   }
 
@@ -166,13 +135,12 @@
     }
   }
 
-  // Quotes
   function changeQuote() {
     $(".quote").text(randomElement(quotes));
 
   }
   timeInfo();
-  changeQuote(); //to be deleted
+  changeQuote();
   setInterval(timeInfo, 10800000); //once 3h
   setInterval(changeQuote, 15000);
 
@@ -182,9 +150,9 @@
     $(".instalation").slideToggle();
   }
 
-  function passArray() { //array iteration
+  function passArray() {
     if (localImages.length != 0) {
-      for (var i = 0; i < localImages.length; i++) { //pass the array for image initalization
+      for (var i = 0; i < localImages.length; i++) {
         $(".images").append("<img src='" + localImages[i] + "' class='image img-fluid'>");
       }
     }
